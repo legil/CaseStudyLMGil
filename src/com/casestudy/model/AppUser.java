@@ -5,23 +5,28 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 @Entity
 public class AppUser {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private long id;
+	@Column(name = "user_id")
+	private long user_id;
 	
 	@Column(name = "appUserName")
 	private String name;
 	
+//	@OneToOne()
+//	private BoardCollection boardCollection;
 	
-	public long getId() {
-		return id;
+	
+	public long getUserId() {
+		return user_id;
 	}
 	public void setId(long id) {
-		this.id = id;
+		this.user_id = id;
 	}
 	public String getName() {
 		return name;
@@ -30,7 +35,5 @@ public class AppUser {
 		this.name = name;
 	}
 	
-	
-	
-	
+
 }
