@@ -15,11 +15,11 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 @Entity
-@Table(name = "link")
+@Table(name = "links")
 public class Link {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private long board_id;
+	private long link_id;
 	
 	@Column(name = "note")
 	private String note;
@@ -38,8 +38,10 @@ public class Link {
 	@Column(name = "last_modified")
 	private Date dateModified;
 	
-	@ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "fk_board")
-    private Board board;
+	@ManyToOne
+	@JoinColumn(name = "board_id")
+	private Board board;
+	
+
 	
 }

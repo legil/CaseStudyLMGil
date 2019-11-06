@@ -2,8 +2,11 @@
 package com.casestudy.model;
 
 import java.sql.Date;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -18,11 +21,12 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 @Entity
-@Table(name = "board")
+@Table(name = "boards")
 public class Board {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "board_id")
 	private long id;
 
 	@Column(name = "title")
@@ -39,8 +43,8 @@ public class Board {
 	@Column(name = "last_modified")
 	private java.util.Date lastModified;
 	
-	@OneToMany(mappedBy = "board_id")
-	private List<Link> board;
+	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "board")
+	private Set<Link> links = new HashSet<Link>();
 
 	// add links //add board collection id //add datemodified
 
