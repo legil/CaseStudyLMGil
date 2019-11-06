@@ -41,7 +41,7 @@ public class DataConfig {
 		LocalContainerEntityManagerFactoryBean lcemfb = new LocalContainerEntityManagerFactoryBean();
 		lcemfb.setJpaVendorAdapter(getJpaVendorAdapter());
 		lcemfb.setDataSource(dataSource()); //JDBC
-		lcemfb.setPersistenceUnitName("securityUnit");
+		lcemfb.setPersistenceUnitName("CSPersistenceUnit");
 		lcemfb.setPackagesToScan("com.casestudy.model");
 		lcemfb.setJpaProperties(hibernateProperties()); //hibernate
 		return lcemfb;
