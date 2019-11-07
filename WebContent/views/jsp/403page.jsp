@@ -7,7 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<jsp:include page="menu.jsp"/>
+	<jsp:include page="header.jsp"/>
+	<!--<jsp:include page="menu.jsp"/>-->
 	<h3 style="color: red">${message}</h3>
+	<jsp:include page="footer.jsp"/>
 </body>
 </html>

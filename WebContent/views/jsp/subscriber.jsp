@@ -7,7 +7,10 @@
 <title>Subscriber Page</title>
 </head>
 <body>
+<jsp:include page="header.jsp"/>
 <jsp:include page="menu.jsp"/>
 You've reached to the subscription page!
+
+<jsp:include page="footer.jsp"/>
 </body>
 </html>

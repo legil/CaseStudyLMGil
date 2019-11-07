@@ -22,7 +22,7 @@
 		</c:if>
 	</div>
 	<br>
-	<img src="<c:url value='images/logo.jpg'/>"/>
+	<!--<img src="<c:url value='images/logo.jpg'/>"/> -->
 	<br>
 </body>
 </html>

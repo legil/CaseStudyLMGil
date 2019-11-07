@@ -5,13 +5,46 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+
+<!-- Regular CSS comes after bootstrap CSS -->
+<link rel="stylesheet" type="text/css" href="css/goodVibes.css">
+
+<!-- This is needed in order to use font awesome -->
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+	integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+	crossorigin="anonymous">
+
 </head>
 <body>
+	<footer class="page-footer font-small blue pt-4" id="my-footer">
 
-	<div id="my-footer">
-		<p>&copy; Pinboard 2019</p>
-		<p>Designed by Leslie Gil</p>
-	</div>
+		<!-- Footer Links -->
+		<div class="container-fluid text-center text-md-left">
+
+			<!-- Grid row -->
+			<div class="row">
+
+				<!-- Grid column -->
+				<div class="col-md-6 mt-md-0 mt-3">
+
+					<!-- Content -->
+					<h5 class="text-uppercase">&copy; Pinboard 2019</h5>
+					<p>Designed by Leslie Gil</p>
+
+				</div>
+
+				<hr class="clearfix w-100 d-md-none pb-3">
+
+			</div>
+		</div>
+	</footer>
 
 	<!-- Optional JavaScript -->
 

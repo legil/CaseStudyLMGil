@@ -9,14 +9,17 @@
 <title>All Page</title>
 </head>
 <body>
+	<jsp:include page="header.jsp" />
 	<jsp:include page="menu.jsp" />
+	
 	<sec:authorize access="hasRole('ADMIN')">
 		<p>Only Admin Can See</p>
 	</sec:authorize>
 	<sec:authorize access="hasRole('USER')">
 		<p>Only User Can See</p>
 	</sec:authorize>
-	
+
 	<p>Everyone can see</p>
+	<jsp:include page="footer.jsp"/>
 </body>
 </html>

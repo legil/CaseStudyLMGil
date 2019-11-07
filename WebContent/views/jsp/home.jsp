@@ -8,6 +8,7 @@
 <title>Welcome Home!</title>
 </head>
 <body>
+<jsp:include page="header.jsp"/>
 <jsp:include page="menu.jsp"/>
 
 Welcome ${credential.appUser.name}!
@@ -19,5 +20,6 @@ Username: ${credential.username}
 Password: ${credential.password}
 <br>
 This is an authenticated homepage!
+<jsp:include page="footer.jsp"/>
 </body>
 </html>

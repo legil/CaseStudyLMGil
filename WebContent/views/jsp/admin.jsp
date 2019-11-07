@@ -7,7 +7,9 @@
 <title>Admin Panel</title>
 </head>
 <body>
-<jsp:include page="menu.jsp"/>
+<jsp:include page="header.jsp"/>
+<!--<jsp:include page="menu.jsp"/>-->
+<jsp:include page="footer.jsp"/>
 Admin, delete all users!
 </body>
 </html>
