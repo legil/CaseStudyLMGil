@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 
 @Entity
 @Table (name="users")
-public class Credential {
+public class Credential implements java.io.Serializable {
 	@Id
 	@Column(name = "username")
 	private String username;

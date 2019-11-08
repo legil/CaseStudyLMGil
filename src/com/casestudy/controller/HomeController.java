@@ -30,7 +30,7 @@ public class HomeController {
 	
 	@RequestMapping("/subscriber")
 	public ModelAndView getSubscriber() {
-		System.out.println("In the subs!");;
+		System.out.println("In the subs!");
 		ModelAndView mav = new ModelAndView("subscriber");
 		return mav;
 	}

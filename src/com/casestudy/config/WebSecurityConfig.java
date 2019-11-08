@@ -38,8 +38,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 	protected void configure(HttpSecurity http) throws Exception {
 	
 			http.authorizeRequests().antMatchers("/contactus").permitAll();
+			http.authorizeRequests().antMatchers("/subscriber").anonymous();
 			http.authorizeRequests().antMatchers("/admin/**").hasRole("ADMIN");
-			http.authorizeRequests().antMatchers("/subscriber/**").hasRole("USER");
+			//http.authorizeRequests().antMatchers("/subscriber/**").hasRole("USER");
 			http.authorizeRequests().antMatchers("/all/**").hasAnyRole("ADMIN", "USER");
 			http.authorizeRequests().anyRequest().authenticated();
 			http.authorizeRequests().and().exceptionHandling().accessDeniedPage("/403");

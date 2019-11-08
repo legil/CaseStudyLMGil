@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToOne;
 
 @Entity
-public class AppUser {
+public class AppUser implements java.io.Serializable{
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
