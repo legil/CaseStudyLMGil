@@ -9,7 +9,7 @@
 </head>
 <body>
 <jsp:include page="header.jsp"/>
-<jsp:include page="menu.jsp"/>
+
 
 Welcome ${credential.appUser.name}!
 <br>

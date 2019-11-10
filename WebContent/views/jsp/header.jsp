@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!doctype html>
@@ -23,30 +24,37 @@
     
     <!-- Start of Navbar -->
   <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-    <a href=" " class="navbar-brand"><i class="fas fa-map-pin mr-2"></i>Pinboard</a>
+    <a href="${pageContext.request.contextPath}/" class="navbar-brand"><i class="fas fa-map-pin mr-2"></i>Pinboard</a>
      <div class="container justify-content-start">
         <ul class="nav navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="#">Home</a>
+                <a class="nav-link" href="${pageContext.request.contextPath}/">Home</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">About</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
+                <a class="nav-link" href="${pageContext.request.contextPath}/contactus">Contact</a>
             </li>
         </ul>
     </div>
     <div class="container justify-content-end">
         <ul class="nav navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="#">Login</a>
+            	<c:if test="${pageContext.request.userPrincipal.name == null}">
+                <a class="nav-link" href="${pageContext.request.contextPath}/login">Login</a>
+                </c:if>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Register</a>
+            <c:if test="${pageContext.request.userPrincipal.name == null}">
+                <a class="nav-link" href="${pageContext.request.contextPath}/register">Register</a>
+            </c:if>
             </li>
+            
             <li class="nav-item">
-                <a class="nav-link" href="#">Logout</a>
+            <c:if test="${pageContext.request.userPrincipal.name != null}">
+                <a class="nav-link" href="${pageContext.request.contextPath}/logout">Logout</a>
+            </c:if>
             </li>
         </ul>
     </div>

@@ -11,7 +11,6 @@
 </head>
 <body>
 	<jsp:include page="header.jsp" />
-	<jsp:include page="menu.jsp" />
 	You've reached to the subscription page!
 
 	<form action="main.jsp" method="GET">

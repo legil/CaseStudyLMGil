@@ -28,10 +28,10 @@ public class HomeController {
 		return mav;
 	}
 	
-	@RequestMapping("/subscriber")
+	@RequestMapping("/register")
 	public ModelAndView getSubscriber() {
 		System.out.println("In the subs!");
-		ModelAndView mav = new ModelAndView("subscriber");
+		ModelAndView mav = new ModelAndView("register");
 		return mav;
 	}
 	

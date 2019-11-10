@@ -10,7 +10,7 @@
 </head>
 <body>
 	<jsp:include page="header.jsp" />
-	<jsp:include page="menu.jsp" />
+
 	
 	<sec:authorize access="hasRole('ADMIN')">
 		<p>Only Admin Can See</p>
