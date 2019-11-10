@@ -10,6 +10,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.casestudy.model.AppUser;
 import com.casestudy.model.Credential;
 import com.casestudy.repository.UserRepository;
 
