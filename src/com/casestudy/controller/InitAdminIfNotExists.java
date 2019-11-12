@@ -7,27 +7,27 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.casestudy.model.AppUser;
+import com.casestudy.model.User;
 import com.casestudy.model.Authorities;
 import com.casestudy.model.Credential;
-import com.casestudy.repository.UserRepository;
-import com.casestudy.service.UserService;
+import com.casestudy.repository.CredentialRepository;
+import com.casestudy.service.CredentialService;
 
 @Controller
 @Transactional
 public class InitAdminIfNotExists {
 
 	@Autowired
-	UserService userService;
+	CredentialService userService;
 
 	@Autowired
-	UserRepository userRepository;
+	CredentialRepository credentialRepository;
 
 	//Optional
 	@RequestMapping("/login")
 	public void initAdmin() {
 
-		Credential user = userRepository.findByUsername("kun@ps.org");
+		Credential user = credentialRepository.findByUsername("kun@ps.org");
 
 		if (user == null) {
 			System.out.println("Creating admin...");
@@ -38,17 +38,17 @@ public class InitAdminIfNotExists {
 			adminUser.setEnabled(true);
 
 			Authorities role = new Authorities();
-			role.setUser(adminUser);
+			role.setCredential(adminUser);
 			role.setAuthority("ROLE_ADMIN");
 			
 			
-			AppUser kun = new AppUser();
+			User kun = new User();
 			kun.setName("Kun PS");
 			
-			adminUser.setAppUser(kun);
+			adminUser.setUser(kun);
 			adminUser.getAuthorities().add(role);
 			
-			userService.saveUser(adminUser);
+			userService.addCredential(adminUser);
 		}
 	}
 

@@ -9,13 +9,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.casestudy.model.Credential;
-import com.casestudy.repository.UserRepository;
+import com.casestudy.repository.CredentialRepository;
+
 
 @Controller
 public class HomeController {
 
 	@Autowired
-	UserRepository userRepository;
+	CredentialRepository credentialRepository;
 	
 	@RequestMapping("/")
 	public ModelAndView getHome(Model model, Principal principal) {
@@ -23,7 +24,7 @@ public class HomeController {
 		if (principal.getName() == null)
 			return new ModelAndView("redirect:/login");
 		
-		Credential credential = userRepository.findByUsername(principal.getName());
+		Credential credential = credentialRepository.findByUsername(principal.getName());
 		mav.addObject("credential", credential);
 		return mav;
 	}

@@ -34,12 +34,12 @@ public class Authorities {
 		this.authority = authority;
 	}
 
-	public Credential getUser() {
+	public Credential getCredential() {
 		return user;
 	}
 
-	public void setUser(Credential user) {
-		this.user = user;
+	public void setCredential(Credential credential) {
+		this.user = credential;
 	}
 	
 	@Override
@@ -72,7 +72,7 @@ class AuthoritiesId implements Serializable {
 		return user;
 	}
 
-	public void setUser(Credential user) {
-		this.user = user;
+	public void setUser(Credential credential) {
+		this.user = credential;
 	}
 }

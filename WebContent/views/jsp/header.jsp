@@ -51,6 +51,11 @@
             </c:if>
             </li>
             
+             <li class="nav-item">
+            <c:if test="${pageContext.request.userPrincipal.name != null}"> <%--and check if not admin --%>
+                <a class="nav-link" href="${pageContext.request.contextPath}/">My Boards</a>
+            </c:if>
+            </li>
             <li class="nav-item">
             <c:if test="${pageContext.request.userPrincipal.name != null}">
                 <a class="nav-link" href="${pageContext.request.contextPath}/logout">Logout</a>

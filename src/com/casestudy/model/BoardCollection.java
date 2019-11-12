@@ -26,7 +26,7 @@ public class BoardCollection {
 	
 	@OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	@JoinColumn(name = "user_id", referencedColumnName = "user_id")
-	private AppUser user;
+	private User user;
 	
 	@OneToMany(mappedBy = "boardCollection")
 	private List<Board> boardCollection;

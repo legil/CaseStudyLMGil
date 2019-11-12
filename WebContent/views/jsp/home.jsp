@@ -11,7 +11,7 @@
 <jsp:include page="header.jsp"/>
 
 
-Welcome ${credential.appUser.name}!
+Welcome ${credential.user.name}!
 <br>
 
 <br>

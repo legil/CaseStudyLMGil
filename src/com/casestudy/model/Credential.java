@@ -7,6 +7,8 @@ import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
@@ -31,7 +33,7 @@ public class Credential implements java.io.Serializable {
 	
 	@OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
 	@JoinColumn(name = "fk_appUser")
-	private AppUser appUser;
+	private User user;
 	
 	public String getUsername() {
 		return username;
@@ -58,11 +60,11 @@ public class Credential implements java.io.Serializable {
 		this.authorities = authorities;
 	}
 	
-	public AppUser getAppUser() {
-		return appUser;
+	public User getUser() {
+		return user;
 	}
-	public void setAppUser(AppUser appUser) {
-		this.appUser = appUser;
+	public void setUser(User user) {
+		this.user = user;
 	}
 	@Override
 	public String toString() {
