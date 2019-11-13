@@ -13,7 +13,7 @@
 	crossorigin="anonymous">
 
 <!-- Regular CSS comes after bootstrap CSS -->
-<link rel="stylesheet" type="text/css" href="css/goodVibes.css">
+<link rel="stylesheet" type="text/css" href="css/styles.css">
 
 <!-- This is needed in order to use font awesome -->
 <link rel="stylesheet"

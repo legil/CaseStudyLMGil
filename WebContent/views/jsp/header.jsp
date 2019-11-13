@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <!-- Regular CSS comes after bootstrap CSS -->
-    <link rel="stylesheet" type="text/css" href="css/goodVibes.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
 
     <!-- This is needed in order to use font awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
@@ -23,8 +23,8 @@
   <body>
     
     <!-- Start of Navbar -->
-  <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-    <a href="${pageContext.request.contextPath}/" class="navbar-brand"><i class="fas fa-map-pin mr-2"></i>Pinboard</a>
+  <nav class="navbar navbar-expand-sm navbar-light" style="background-color: #F7761D;">
+    <a href="${pageContext.request.contextPath}/" class="navbar-brand"><i class="fas fa-map-pin mr-4"></i>Pinboard</a>
      <div class="container justify-content-start">
         <ul class="nav navbar-nav">
             <li class="nav-item">
@@ -53,7 +53,7 @@
             
              <li class="nav-item">
             <c:if test="${pageContext.request.userPrincipal.name != null}"> <%--and check if not admin --%>
-                <a class="nav-link" href="${pageContext.request.contextPath}/">My Boards</a>
+                <a class="nav-link" href="${pageContext.request.contextPath}/boards">My Boards</a>
             </c:if>
             </li>
             <li class="nav-item">

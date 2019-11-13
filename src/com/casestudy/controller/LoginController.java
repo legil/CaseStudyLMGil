@@ -93,5 +93,10 @@ public class LoginController {
         return mav;
     }
 
-
+    @RequestMapping("/boards")
+    public ModelAndView showBoards() {
+        ModelAndView mav = new ModelAndView("boardCollection");
+       // mav.addObject("registrationFormObject", new Credential());
+        return mav;
+    }
 }

@@ -1,7 +1,7 @@
 <%@include file="header.jsp" %>
 
 
-<h1 class="display-2">${message}</h1>
+<p class="h2">${message}</p>
 
 <a href="${pageContext.request.contextPath}/login">
     <button class="btn-danger" value="login" name="Login">Login</button>

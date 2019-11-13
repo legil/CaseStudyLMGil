@@ -51,5 +51,4 @@ public class InitAdminIfNotExists {
 			userService.addCredential(adminUser);
 		}
 	}
-
 }

@@ -15,11 +15,15 @@ Welcome ${credential.user.name}!
 <br>
 
 <br>
-Username: ${credential.username}
+Username: ${credential.username} <%--maintain a session? --%>
 <br>
 Password: ${credential.password}
 <br>
 This is an authenticated homepage!
+
+<br>
+<br>
+<a href="${pageContext.request.contextPath}/boards">My Boards</a>
 <jsp:include page="footer.jsp"/>
 </body>
 </html>
