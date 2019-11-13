@@ -13,3 +13,5 @@
 Admin, delete all users!
 </body>
 </html>
+
+<%--show admin tab and page if admin role--%>

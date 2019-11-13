@@ -18,8 +18,8 @@ public class User implements java.io.Serializable{
 	@Column(name = "appUserName")
 	private String name;
 	
-//	@OneToOne()
-//	private BoardCollection boardCollection;
+	@OneToOne()
+	private BoardCollection boardCollection;
 	
 	
 	public long getUserId() {
@@ -34,6 +34,10 @@ public class User implements java.io.Serializable{
 	public void setName(String name) {
 		this.name = name;
 	}
-	
-
+	public BoardCollection getBoardCollection() {
+		return boardCollection;
+	}
+	public void setBoardCollection(BoardCollection boardCollection) {
+		this.boardCollection = boardCollection;
+	}
 }

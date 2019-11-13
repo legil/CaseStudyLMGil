@@ -35,8 +35,7 @@
 				<div class="col-md-6 mt-md-0 mt-3">
 
 					<!-- Content -->
-					<h5 class="text-uppercase">&copy; Pinboard 2019</h5>
-					<p>Designed by Leslie Gil</p>
+					<h5 class="text-uppercase">&copy; Pinboard 2019 - Leslie Gil</h5>
 
 				</div>
 
