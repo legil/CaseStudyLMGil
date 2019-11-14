@@ -32,7 +32,7 @@ public class Link {
 	
 	@Temporal(TemporalType.TIMESTAMP)
 	@Column(name = "date_added")
-	private java.util.Date dateAdded;
+	private Date dateAdded;
 	
 	@Temporal(TemporalType.TIMESTAMP)
 	@Column(name = "last_modified")
@@ -40,8 +40,62 @@ public class Link {
 	
 	@ManyToOne
 	@JoinColumn(name = "board_id")
-	private Board board;
-	
+	private Board board; //can use to move to a different board
 
+	public long getLink_id() {
+		return link_id;
+	}
+
+	public void setLink_id(long link_id) {
+		this.link_id = link_id;
+	}
+
+	public String getNote() {
+		return note;
+	}
+
+	public void setNote(String note) {
+		this.note = note;
+	}
+
+	public String getUrl() {
+		return url;
+	}
+
+	public void setUrl(String url) {
+		this.url = url;
+	}
+
+	public int getRating() {
+		return rating;
+	}
+
+	public void setRating(int rating) {
+		this.rating = rating;
+	}
+
+	public Date getDateAdded() {
+		return dateAdded;
+	}
+
+	public void setDateAdded(Date dateAdded) {
+		this.dateAdded = dateAdded;
+	}
+
+	public Date getDateModified() {
+		return dateModified;
+	}
+
+	public void setDateModified(Date dateModified) {
+		this.dateModified = dateModified;
+	}
+
+	public Board getBoard() {
+		return board;
+	}
+
+	public void setBoard(Board board) {
+		this.board = board;
+	}
 	
 }

@@ -62,6 +62,4 @@ public class CredentialService implements UserDetailsService {
     public void deleteCredential(Credential credential) {
         credentialRepository.delete(credential);
     }
-
-
 }

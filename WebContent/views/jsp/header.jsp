@@ -27,15 +27,7 @@
     <a href="${pageContext.request.contextPath}/" class="navbar-brand"><i class="fas fa-map-pin mr-4"></i>PINBOARD</a>
      <div class="container justify-content-start">
         <ul class="nav navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="${pageContext.request.contextPath}/">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Menu</a>
-            </li>
+            
             <li class="nav-item">
                 <a class="nav-link" href="${pageContext.request.contextPath}/contactus">Contact</a>
             </li>

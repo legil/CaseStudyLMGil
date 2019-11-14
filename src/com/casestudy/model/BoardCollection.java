@@ -30,9 +30,29 @@ public class BoardCollection {
 	
 	@OneToMany(mappedBy = "boardCollection")
 	private List<Board> boardCollection;
-	
-	//private List<Board> boards;
-	
-	
+
+	public int getBc_id() {
+		return bc_id;
+	}
+
+	public void setBc_id(int bc_id) {
+		this.bc_id = bc_id;
+	}
+
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+
+	public List<Board> getBoardCollection() {
+		return boardCollection;
+	}
+
+	public void setBoardCollection(List<Board> boardCollection) {
+		this.boardCollection = boardCollection;
+	}
 
 }
